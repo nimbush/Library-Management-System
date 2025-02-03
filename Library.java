@@ -9,14 +9,18 @@ import java.util.Scanner;
 public class Library{
     ArrayList<Book> books = new  ArrayList<>();
     Scanner sc = new Scanner(System.in);
-
-    public void addBooks(Book book){
-        if (book != null){
-            books.add(book);
-            System.out.println("Book added: "+ book.getTitle());
-        }else{
-            System.out.println("Can't add");
-        }
+    public void addBooks(Book b){
+        System.out.println("Enter the title:");
+        b.setTitle(sc.nextLine());
+        System.out.println("Enter the author:");
+        b.setAuthor(sc.nextLine());
+        System.out.println("Enter the ISBN");
+        b.setISBN(sc.nextLine());
+        System.out.println("Enter the borrowed person name:");
+        String borrowedName= "";
+        b.setBorrowedName(borrowedName);
+        books.add(b);
+        System.out.println("The data is added");
     }
 
     public void addBooks(){
